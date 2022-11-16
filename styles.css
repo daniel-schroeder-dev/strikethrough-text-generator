@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+    background-color: #3b96ff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+main {
+    margin: 0 auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    font-size: 18px;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 6px;
+}
+
+p {
+    margin: -16px 0 0 0;
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: -12px;
+}
+
+#strike-text {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 6px 5px 0 #00000061;
+}
+
+#copy-message {
+    margin-top: -18px;
+    visibility: hidden;
+}
+
+button {
+    padding: 10px 14px;
+    font-size: 18px;
+    background-color: inherit;
+    color: white;
+    border: 3px solid white;
+    position: relative;
+}
+
+button:hover:after {
+    width: 100%;
+}
+
+button:hover {
+    color: #3b96ff;
+}
+
+button:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+#strike-text-container {
+    border: 1px solid white;
+    width: 100%;
+    padding: 24px;
+    visibility: hidden;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: 3s fadeOut 2s ease-in-out;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
